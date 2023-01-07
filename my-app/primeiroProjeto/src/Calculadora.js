@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
 
-const Calculadora = () => {
+const Calculadora = (props) => {
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
     const [result, setResult] = useState(0)
     const [operation, setOperation] = useState("Somar")
-
+    
+    
     useEffect(()=> {
         setResult(calcular())
     }, [num1, num2, operation])
@@ -24,6 +25,7 @@ const calcular = () => {
     else{
         return parseFloat(num1)/parseFloat(num2)
     }
+
 }
 
     return (
@@ -35,14 +37,15 @@ const calcular = () => {
             <div>
                 <input type="number" placeholder="Numero dois" value={num2} onChange={(e) => setNum2(e.target.value)} />
             </div>
-            <select onChange={(e) => setOperation(e.target.value)}>
-                <option>Somar</option>
-                <option>Subtrair</option>
-                <option>Multiplicar</option>
-                <option>Dividir</option>
-            </select>
+            
 
-            <p>Resultado = {result} </p>
+            <button onClick={(e) => setOperation(e.target.textContent)}>Somar</button>
+            <button onClick={(e) => setOperation(e.target.textContent)}>Subtrair</button>
+            <button onClick={(e) => setOperation(e.target.textContent)}>Multiplicar</button>
+            <button onClick={(e) => setOperation(e.target.textContent)}>Dividir</button>
+
+            <p>Resultado = {result} {props.value}</p>
+            
         </div>
     )
 }
