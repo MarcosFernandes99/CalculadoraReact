@@ -53,7 +53,6 @@ const Calculadora = () => {
                     <p>Resultado = {result}</p>
                 </div>
 
-
                 <div>
                     <h3>Histórico</h3>
                     <Historico value={historico}/>
