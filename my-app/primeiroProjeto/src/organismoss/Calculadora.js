@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Historico from "./Historico"
+import Historico from "../moleculas/Historico"
 
 const Calculadora = () => {
     const [num1, setNum1] = useState(0)

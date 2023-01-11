@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Calculadora from './Calculadora'
+import Calculadora from '../organismoss/Calculadora'
 
 
 function App() {
