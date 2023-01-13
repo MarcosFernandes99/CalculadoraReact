@@ -8,13 +8,13 @@ const Span: React.FC<{
 
     if (!props.status) {
 
-        return <input onFocus={props.onToggle} value={props.children} />
+        return <input onMouseOver={props.onToggle} value={props.children} />
 
     }
 
     return (
         <>
-            <input onFocus={props.onToggle} value={props.children} />
+            <input onMouseOut={props.onToggle} value={props.children} />
             <p>
                 **FUNÇÃO DE HOVER FUNCIONANDO**
             </p>

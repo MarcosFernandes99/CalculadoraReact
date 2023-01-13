@@ -1,13 +1,17 @@
 import './App.css';
 import Span from './moleculas/Span';
+import Calculadora from './organismos/Calculadora';
 
 function App() {
   return (
     <>
-      <div>
+    <div>
      High-Order Components
     </div>
-    <Span>CLICA AQUI</Span>
+    <Span>PASSE O MOUSE</Span>
+    <div>
+    <Calculadora></Calculadora>
+    </div>
     </>
   
   );
