@@ -2,17 +2,6 @@ const Button = () => {
 
     return (
         <>
-            <h2 className="title">
-                Boas-vindas Amigo(a)
-            </h2>
-
-            <div className="text">
-                <p className="citation">
-                    Who woudn't want their friends to be happy? That's just normal, man. It's nothing amazing.
-                    (Citation of: Makoto Sunakawa, Ore Monogatar!!!)
-                </p>
-            </div>
-
             <div className="buttons">
                 <button className="button noteOne">1</button>
                 <button className="button noteTwo">2</button>
