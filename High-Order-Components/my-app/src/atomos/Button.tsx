@@ -1,22 +1,25 @@
-const Button = () => {
+import {ICitation} from "../moleculas/Citation"
 
+interface IButton {
+    HandleClick: (firstNumber?: number, secondNumber?: number, operation?: string) => void;
+    HandleVote: (citation?: ICitation, grade?: number) => void;
+    firstNum?: number;
+    secondNum?: number;
+    citation?: ICitation;
+    children: string | number;
+}
+
+
+const Button: React.FC<IButton> = (props) => {
+    
     return (
-        <>
-            <div className="buttons">
-                <button className="button noteOne">1</button>
-                <button className="button noteTwo">2</button>
-                <button className="button noteThree">3</button>
-                <button className="button noteFour">4</button>
-                <button className="button noteFive">5</button>
-                <button className="button noteSix">6</button>
-                <button className="button noteSeven">7</button>
-                <button className="button noteEight">8</button>
-                <button className="button noteNine">9</button>
-                <button className="button noteTen">10</button>
-            </div>
 
-        </>
+        <button onClick={() => {props.HandleClick(props.firstNum, props.secondNum, props.children?.toString()), props.HandleVote(props.citation, 
+            props.children)}}></button>
+
     )
+
+
 }
 
 export default Button

@@ -1,4 +1,4 @@
-
+import Span from "../atomos/Span";
 
 export interface ICitation {
     citation: string;
@@ -30,3 +30,5 @@ const Citation: React.FC<ICitation> = (props) => {
         </>
     )
 }
+
+export default Citation
