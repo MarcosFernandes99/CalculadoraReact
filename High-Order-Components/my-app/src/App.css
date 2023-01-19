@@ -16,28 +16,6 @@ body{
   font-size: 7vh;
 }
 
-.quote{
-  margin-top: 3vh;
-  font-size: 3vh;
-}
-
-.quoteCard {
-  margin-top: 3vh;
-  border: 0.5vh solid black;
-  border-radius: 1vh;
-  background-color: rgb(125, 199, 199);
-}
-
-.anime{
-  margin-top: 2vh;
-  font-size: 2vh;
-}
-
-.character{
-  margin-top: 2vh;
-  font-size: 2vh;
-}
-
 .best {
   font-size: 5vh;
   margin-top: 3vh;
