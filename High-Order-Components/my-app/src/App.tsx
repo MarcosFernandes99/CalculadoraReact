@@ -1,7 +1,6 @@
 import './App.css';
-import Button from './atomos/Button';
-import Span from './moleculas/Span';
-import Calculadora from './organismos/Calculadora';
+import VoteCitation from './organismos/VoteCitation';
+
 
 function App() {
   return (
@@ -13,8 +12,10 @@ function App() {
     <div>
     <Calculadora></Calculadora>
     </div> */}
-
-    <Button></Button>
+    
+    <VoteCitation></VoteCitation>
+    
+    
     </>
   
   );

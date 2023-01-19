@@ -13,30 +13,52 @@ body{
 
 .title{
   text-align: center;
-  font-size: 50px;
+  font-size: 7vh;
 }
 
-.text{
-  margin-top: 10vh;
+.quote{
+  margin-top: 3vh;
+  font-size: 3vh;
 }
 
-.citation{
-  font-size: 30px;
-  text-align: center;
+.quoteCard {
+  margin-top: 3vh;
+  border: 0.5vh solid black;
+  border-radius: 1vh;
+  background-color: rgb(125, 199, 199);
 }
 
-.buttons{
-  margin-top: 10vh;
+.anime{
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+.character{
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+.best {
+  font-size: 5vh;
+  margin-top: 3vh;
   text-align: center;
 }
 
 .button{
+  margin-top: 10vh;
+  text-align: center;
   margin-left: 2vw;
   width: 4vw;
   height: 4vh;
   border-radius: 5px;
   cursor: pointer;
 }
+
+.buttons{
+  text-align: center;
+}
+
+
 
 
 

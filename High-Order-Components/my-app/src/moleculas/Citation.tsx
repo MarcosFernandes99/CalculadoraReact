@@ -1,7 +1,7 @@
 import Span from "../atomos/Span";
 
 export interface ICitation {
-    citation: string;
+    quote: string;
     character: string;
     anime: string;
     nota?: number;
@@ -10,9 +10,9 @@ export interface ICitation {
 const Citation: React.FC<ICitation> = (props) => {
     return (
         <>
-            <div>
-                <div>
-                    <Span>{props.citation}</Span>
+            <div className="quoteCard">
+                <div className="quote">
+                    <Span>{props.quote}</Span>
                 </div>
                 <div>
                     {props.nota !== undefined ?
@@ -23,8 +23,8 @@ const Citation: React.FC<ICitation> = (props) => {
                         : null
 
                     }
-                    <Span>{props.anime}</Span>
-                    <Span>{props.character + ', '}</Span>                   
+                    <Span><p className="anime">{props.anime}</p></Span>
+                    <Span><p className="character">{props.character + ', '}</p></Span>                   
                 </div>
             </div>
         </>

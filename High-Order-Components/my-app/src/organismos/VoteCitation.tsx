@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useEffect, useState } from "react"
 import Citation, {ICitation} from "../moleculas/Citation"
 import VoteButtons from "../moleculas/VoteButtons"
@@ -5,8 +6,8 @@ import CitationRank from "../moleculas/CitationRank"
 
 
 const VoteCitation: React.FC = () => {
-    const [citation, setCitation] = useState({ citation: "", character: "", anime: "" })
-    const [citationList, setCitationLIst] = useState([])
+    const [quote, setQuote] = useState<ICitation>({ quote: "", character: "", anime: "" })
+    const [quoteList, setQuoteList] = useState<ICitation[]>([])
 
 
     useEffect(() => {
@@ -16,28 +17,39 @@ const VoteCitation: React.FC = () => {
 
     const handleCLick = (item?: ICitation, grade?: number,) => {
         if (item && grade) {
-            let newCitation = { citation: item.citation, character: item.character, anime: item.anime, nota: 0 }
-            newCitation.nota = grade
-            let array = [...citationList]
-            array.push(newCitation)
-            setCitationLIst()
+            let newQuote = { quote: item.quote, character: item.character, anime: item.anime, nota: 0 }
+            newQuote.nota = grade
+            let array = [...quoteList]
+            array.push(newQuote)
+            setQuoteList(array)
             getCitation()
         }
     }
 
+    async function fetchCitation(){
+        const { data } = await axios.get('https://animechan.vercel.app/api/random')
+        return data
+    }
+
+
+    async function getCitation() {
+        const data: ICitation = await fetchCitation()
+        const item = {quote: data.quote, character: data.character, anime: data.anime}
+        setQuote(item)
+    }
 
     return (
         <>
             <section className="welcome">
-                <h1>Boas-vindas Amigo(a)</h1>
-                <Citation citation={citation.citation} character={citation.character} anime={citation.anime}/>
+                <h1 className="title">Qual sua nota para esta citação?</h1>
+                <Citation quote={quote.quote} character={quote.character} anime={quote.anime}/>
                 <br></br>
-                <VoteButtons citation={citation} onClick={handleCLick}></VoteButtons>
+                <VoteButtons quote={quote} OnClick={handleCLick}></VoteButtons>
             </section>
 
             <section className="welcome">
-                <h2>Melhoroes Citações</h2>
-                <CitationRank citationList={citationList}></CitationRank>
+                <h2 className="best">Melhoroes Citações</h2>
+                <CitationRank quoteList={quoteList}></CitationRank>
 
             </section>
             <p></p>
@@ -48,4 +60,4 @@ const VoteCitation: React.FC = () => {
 
 }
 
-export VoteCitation
+export default VoteCitation
