@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import Citation, {ICitation} from "../moleculas/Citation"
 import VoteButtons from "../moleculas/VoteButtons"
 import CitationRank from "../moleculas/CitationRank"
+import Input from "../atomos/Input"
 
 
 const VoteCitation: React.FC = () => {
@@ -45,6 +46,8 @@ const VoteCitation: React.FC = () => {
                 <Citation quote={quote.quote} character={quote.character} anime={quote.anime}/>
                 <br></br>
                 <VoteButtons quote={quote} OnClick={handleCLick}></VoteButtons>
+                <br></br>
+                <Input></Input>
             </section>
 
             <section className="welcome">

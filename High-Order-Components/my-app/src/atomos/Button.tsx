@@ -22,7 +22,7 @@ const Btn = styled.button`
 const Button: React.FC<IButton> = (props) => {
 
     return (
-
+    
         <Btn className="button" onClick={() => {
             props.HandleVote(props.quote,
                 parseInt(props.children))
