@@ -22,7 +22,7 @@ body{
   text-align: center;
 }
 
-.button{
+/* .button{
   margin-top: 10vh;
   text-align: center;
   margin-left: 2vw;
@@ -30,7 +30,7 @@ body{
   height: 4vh;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 .buttons{
   text-align: center;

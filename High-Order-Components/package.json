@@ -4,5 +4,8 @@
     "node-sass": "^8.0.0",
     "react-query": "^3.39.2",
     "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
   }
 }
