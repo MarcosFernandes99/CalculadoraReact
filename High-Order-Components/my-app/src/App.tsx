@@ -1,5 +1,6 @@
 import './App.css';
 import VoteCitation from './organismos/VoteCitation';
+import "./App.scss"
 
 
 function App() {

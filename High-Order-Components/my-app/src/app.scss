@@ -1,0 +1,61 @@
+//FORMA 1 DIRETO NA TAG
+
+// body {
+//     padding: 10px;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 20vh;
+//     background-color: rgba(80, 80, 80, 0.801);
+
+//     div{
+//         margin-top: 3vh;
+//         margin: 2vh 2vh 2vh 2vh;
+//         font-size: 3vh;
+//         background-color: white;
+
+//     }
+//   }
+
+//FORMA 2 ATRAVÉS DE VARÁVEL
+
+// $cinza: gray;
+// $vermelho: red;
+
+// body {
+//     padding: 10px;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 20vh;
+//     background-color: $cinza;
+
+//     div{
+//         margin-top: 3vh;
+//         margin: 2vh 2vh 2vh 2vh;
+//         font-size: 3vh;
+//         background-color: $vermelho;
+
+//     }
+//   }
+
+// FORMA 3 VIA EXTENDS
+
+// %style {
+//     padding: 10px;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 20vh;
+//     background-color: rgb(201, 37, 37)
+
+// }
+
+// body {
+//     @extend %style;
+
+//     div {
+//         margin-top: 3vh;
+//         margin: 2vh 2vh 2vh 2vh;
+//         font-size: 3vh;
+//         background-color: greenyellow;
+
+//     }
+// }

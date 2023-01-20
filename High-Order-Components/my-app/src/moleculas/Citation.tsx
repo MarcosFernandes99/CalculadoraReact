@@ -1,4 +1,5 @@
 import Span from "../atomos/Span";
+import styles from "../App.module.css"
 
 export interface ICitation {
     quote: string;

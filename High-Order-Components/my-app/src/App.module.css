@@ -1,0 +1,11 @@
+body {
+    background-color: green;
+}
+
+.quoteCard {
+    background-color: red;
+    margin-top: '3vh';
+    border: '0.5vh solid black';
+    border-radius: '3vh';
+    font-size: '3vh';
+}
