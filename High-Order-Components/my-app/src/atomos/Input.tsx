@@ -22,10 +22,10 @@ const Input: React.FC = () => {
         <>
             <div style={stylesDiv}>
                 <label>Nome:</label>
-                <input style={inputStyle} ></input>
+                <input data-testid="test-input-name" style={inputStyle} ></input>
                 <label>Idade:</label>
-                <input style={inputStyle}></input>
-                <button style={buttonStyle} >Enviar</button>
+                <input data-testid="test-input-age" style={inputStyle}></input>
+                <button data-testid="test-button" type="submit" style={buttonStyle} >Enviar</button>
             </div>
         </>
     )

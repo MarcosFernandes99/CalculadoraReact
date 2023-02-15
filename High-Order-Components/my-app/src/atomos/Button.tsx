@@ -23,7 +23,7 @@ const Button: React.FC<IButton> = (props) => {
 
     return (
     
-        <Btn className="button" onClick={() => {
+        <Btn data-testid="test-button" className="button" onClick={() => {
             props.HandleVote(props.quote,
                 parseInt(props.children))
         }}>{props.children}</Btn>
